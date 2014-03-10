@@ -16,7 +16,7 @@ http://blog.csdn.net/lin1986lin/article/details/20942807
 
 UIImage+LQType.h
 ================
-
+<pre>
 typedef NS_ENUM(NSInteger, LQImageType) {
     LQImageNetType,//使用网络原图大小
     LQImageSmallType, //头像90X90
@@ -28,10 +28,10 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 @property (nonatomic,assign) LQImageType lqImageType;
 
 @end
-
+<pre>
 UIImage+LQType.m
 ================ 
-
+<pre>
 @implementation UIImage (LQType)
 
 - (void)setBpImageType:(LQImageType)lqImageType
@@ -45,4 +45,4 @@ UIImage+LQType.m
 }
 
 @end
-
+<pre>
