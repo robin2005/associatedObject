@@ -10,10 +10,12 @@ associative 要用它必须使用<objc/runtime.h>的头文件
 http://blog.csdn.net/lin1986lin/article/details/20942807
 
 如何使用：
+================
 
 例如我们扩展UImage一个属性的时候：
 
 在UIImage+LQType.h头文件
+================
 
 typedef NS_ENUM(NSInteger, LQImageType) {
     LQImageNetType,//使用网络原图大小
@@ -28,7 +30,8 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 @end
 
 在UIImage+LQType.m头文件
- 
+================ 
+
 @implementation UIImage (LQType)
 
 - (void)setBpImageType:(LQImageType)lqImageType
