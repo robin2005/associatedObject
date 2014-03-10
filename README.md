@@ -29,8 +29,10 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 
 @end
 </pre>
+
 UIImage+LQType.m
 ================ 
+
 <pre>
 #import "UIImage+LQType.h"
 #import "NSObject+associatedObject.h"
