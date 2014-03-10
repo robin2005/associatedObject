@@ -28,10 +28,12 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 @property (nonatomic,assign) LQImageType lqImageType;
 
 @end
-<pre>
+</pre>
 UIImage+LQType.m
 ================ 
 <pre>
+#import "UIImage+LQType.h"
+#import "NSObject+associatedObject.h"
 @implementation UIImage (LQType)
 
 - (void)setBpImageType:(LQImageType)lqImageType
@@ -45,4 +47,4 @@ UIImage+LQType.m
 }
 
 @end
-<pre>
+</pre>
