@@ -28,10 +28,7 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 @end
 
 在UIImage+LQType.m头文件
-
-#import "UIImage+LQType.h"
-#import "NSObject+associatedObject.h"
-
+ 
 @implementation UIImage (LQType)
 
 - (void)setBpImageType:(LQImageType)lqImageType
