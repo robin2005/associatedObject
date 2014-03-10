@@ -14,7 +14,7 @@ http://blog.csdn.net/lin1986lin/article/details/20942807
 
 例如我们扩展UImage一个属性的时候：
 
-在UIImage+LQType.h头文件
+UIImage+LQType.h
 ================
 
 typedef NS_ENUM(NSInteger, LQImageType) {
@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 
 @end
 
-在UIImage+LQType.m头文件
+UIImage+LQType.m
 ================ 
 
 @implementation UIImage (LQType)
@@ -45,3 +45,4 @@ typedef NS_ENUM(NSInteger, LQImageType) {
 }
 
 @end
+
