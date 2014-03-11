@@ -9,43 +9,44 @@ associative 要用它必须使用<objc/runtime.h>的头文件
 
 http://blog.csdn.net/lin1986lin/article/details/20942807
 
-如何使用：
+Usage：
+================
+例如扩展UImage一个属性：
+
+UIImage+LQImageSizeType.h
 ================
 
-例如我们扩展UImage一个属性的时候：
-
-UIImage+LQType.h
-================
 <pre>
-typedef NS_ENUM(NSInteger, LQImageType) {
-    LQImageNetType,//使用网络原图大小
-    LQImageSmallType, //头像90X90
-    LQImageMiddleHType 
+typedef NS_ENUM(NSInteger, LQImageSizeType) {
+    LQImageNetType,     //网络图
+    LQImageSmallType,   //小图
+    LQImageMiddleHType, //中图
+    LQImageBigHType     //大图
 };
 
-@interface UIImage (LQType)
+@interface UIImage (LQImageSizeType)
 
-@property (nonatomic,assign) LQImageType lqImageType;
+@property (nonatomic,assign) LQImageSizeType lqImageSizeType;
 
 @end
 </pre>
 
-UIImage+LQType.m
+UIImage+LQImageSizeType.m
 ================ 
 
 <pre>
-#import "UIImage+LQType.h"
+#import "UIImage+LQImageSizeType.h"
 #import "NSObject+associatedObject.h"
 @implementation UIImage (LQType)
 
-- (void)setBpImageType:(LQImageType)lqImageType
+- (void)setLQImageSizeType:(LQImageSizeType)lqImageSizeType
 {
-    [self setAssociatedObject:[NSNumber numberWithInt:lqImageType] forKey:"lqimagetype"];
+    [self setAssociatedObject:[NSNumber numberWithInt:lqImageSizeType] forKey:"lqImageSizeType"];
 }
 
-- (BPImageType)lqImageType
+- (LQImageSizeType)lqImageSizeType
 {
-    return [[self associatedObjectForKey:"lqimagetype"] intValue];
+    return [[self associatedObjectForKey:"lqImageSizeType"] intValue];
 }
 
 @end
